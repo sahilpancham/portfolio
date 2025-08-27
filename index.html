@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahil Pancham | AI Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="main.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+
+</head>
+
+<body class="relative">
+  <!-- Background Animation -->
+  <div id="vanta-bg" class="fixed top-0 left-0 w-full h-full z-0"></div>
+
+  <!-- Navigation -->
+
+  <nav class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#home" class="flex items-center">
+          <img src="S_logo.png" alt="Logo" class="h-10 w-auto" />
+        </a>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="text-white hover:text-purple-400 transition duration-300">Home</a>
+          <a href="#about" class="text-white hover:text-purple-400 transition duration-300">About</a>
+          <a href="#skills" class="text-white hover:text-purple-400 transition duration-300">Skills</a>
+          <a href="#projects" class="text-white hover:text-purple-400 transition duration-300">Projects</a>
+          <a href="#experience" class="text-white hover:text-purple-400 transition duration-300">Experience</a>
+          <a href="#contact" class="text-white hover:text-purple-400 transition duration-300">Contact</a>
+        </div>
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer"
+    class="fixed inset-0 z-40 transform -translate-x-full md:hidden transition-transform duration-300 ease-in-out bg-black bg-opacity-90 backdrop-filter backdrop-blur-lg">
+    <div class="flex flex-col h-full pt-20 px-6 space-y-8">
+      <button id="close-menu" class="absolute top-6 right-6 text-white focus:outline-none">
+        <svg class="w-2 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <a href="#home" class="nav-link text-white text-2xl hover:text-purple-400 transition duration-300">Home</a>
+      <a href="#about" class="nav-link text-white text-2xl hover:text-purple-400 transition duration-300">About</a>
+      <a href="#skills" class="nav-link text-white text-2xl hover:text-purple-400 transition duration-300">Skills</a>
+      <a href="#projects"
+        class="nav-link text-white text-2xl hover:text-purple-400 transition duration-300">Projects</a>
+      <a href="#experience"
+        class="nav-link text-white text-2xl hover:text-purple-400 transition duration-300">Experience</a>
+      <a href="#contact" class="nav-link text-white text-2xl hover:text-purple-400 transition duration-300">Contact</a>
+    </div>
+  </div>
+
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden text-center">
+    <div class="content-wrapper max-w-5xl mx-auto px-4 sm:px-6 lg:px-10 py-50">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">
+        Hi, I'm <span class="gradient-text">Sahil Pancham</span>
+      </h1>
+      <h2 class="text-2xl md:text-4xl font-semibold mb-6">AI Engineer</h2>
+      <p class="text-lg text-gray-300 mb-8">
+        Proficiency in Developing AI Powered Applications
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <!-- ✅ Primary Button with custom green -->
+        <a href="#projects" class="px-6 py-3 rounded-lg font-medium text-white transition duration-300 hover:opacity-90"
+          style="background-color: #1a8402;">
+          View My Work
+        </a>
+
+        <!-- Secondary Button (optional tweak for harmony) -->
+
+        <a href="https://drive.google.com/file/d/1Xaxu-6nSWiachB5WpY_eTLL4Yd0NXt0h/view?usp=sharing" target="_blank"
+          download
+          class="px-6 py-3 rounded-lg font-medium text-white border-2 border-yellow-400 bg-black transition duration-300 hover:bg-[#1a8402] hover:border-[#1a8402] hover:text-white">
+          Download Resume
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+    <!-- Scroll-down icon -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+      <a href="#about" class="text-gray-400 hover:text-white animate-bounce">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- About Section -->
+  <section id="about" class="py-20 relative z-10 bg-black bg-opacity-70">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">About Me</h2>
+
+      <div class="flex flex-col md:flex-row items-center mb-16">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <blockquote class="text-xl md:text-2.5xl italic border-l-4 border-purple-500 pl-6 py-2">
+            •
+            Software Developer having proficiency in developing AI-powered applications using Python, Transformers,
+            LangChain, and FastAPI
+            •
+            Proficient in backend development using Django, version control with Git and containerization with Docker
+            seamless code integration and deployment
+          </blockquote>
+          <p class="mt-6 text-gray-300">
+            I earned a Bachelor's degree in Computer Engineering (B.Tech) from RTM Nagpur University </p>
+        </div>
+        <div class="md:w-1/2 md:pl-12 ">
+          <h3 class="text-2xl font-semibold mb-6">Education Timeline</h3>
+          <div class="relative pl-8 ">
+            <div class="timeline-item relative mb-8">
+              <div class="absolute -left-12 top-0 w-8 h-8 rounded-full bg-[#1a8402]  flex items-center justify-center">
+                <i class="fas fa-graduation-cap bg-[#1a8402] text-white"></i>
+              </div>
+              <div class="bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800">
+                <h4 class="text-xl font-semibold">Computer Engineering</h4>
+                <p class="text-yellow-400">RTM Nagpur University • 2020-2024</p>
+                <p class="mt-2 text-gray-300">Specializing in Developing AI Applications</p>
+              </div>
+            </div>
+            <div class="timeline-item relative mb-8">
+              <div class="absolute -left-12 top-0 w-8 h-8 rounded-full bg-[#1a8402] flex items-center justify-center">
+                <i class="fas fa-university text-white"></i>
+              </div>
+              <div class="bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800">
+                <h4 class="text-xl font-semibold">HSC</h4>
+                <p class="text-yellow-400">Somalwar Jr. College • 2018-2020</p>
+                <p class="mt-2 text-gray-300">Completed HSC with 79%</p>
+              </div>
+              <div class="bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800">
+                <h4 class="text-xl font-semibold">SSC</h4>
+                <p class="text-yellow-400">Somalwar High School • 2017-2018</p>
+                <p class="mt-2 text-gray-300">Completed SSC with 87%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+        <div class="bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+          <div class="text-4xl font-bold mb-2 counter" data-target="150">0</div>
+          <p class="text-gray-400">HackerRank Stars</p>
+        </div>
+        <div class="bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+          <div class="text-4xl font-bold mb-2 counter" data-target="100">0</div>
+          <p class="text-gray-400">LeetCode Problems</p>
+        </div>
+        <div class="bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+          <div class="text-4xl font-bold mb-2 counter" data-target="5">0</div>
+          <p class="text-gray-400">Projects</p>
+        </div>
+        <div class="bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+          <div class="text-4xl font-bold mb-2 counter" data-target="2">0</div>
+          <p class="text-gray-400">Hackathons</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 relative z-10 bg-black bg-opacity-70">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">Technical Skills</h2>
+
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 text-center">Languages</h3>
+        <div class="grid grid-cols-3 md:grid-cols-5 gap-6">
+          <div
+            class="skill-icon bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+            <i class="fab fa-python text-5xl text-yellow-400 mb-2"></i>
+            <p class="text-gray-300">Python</p>
+          </div>
+          <!-- <div
+            class="skill-icon bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+            <i class="fas fa-code text-5xl text-blue-400 mb-2"></i>
+            <p class="text-gray-300">Dart</p>
+          </div> -->
+          <div
+            class="skill-icon bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+            <i class="devicon-mysql-plain colored text-5xl mb-2"></i>
+            <p class="text-gray-300">SQL</p>
+          </div>
+          <!-- <div
+            class="skill-icon bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+            <i class="fas fa-code text-5xl text-purple-400 mb-2"></i>
+            <p class="text-gray-300">Kotlin</p>
+          </div> -->
+          <div
+            class="skill-icon bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+            <i class="fas fa-code text-5xl text-blue-600 mb-2"></i>
+            <p class="text-gray-300">C++</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 text-center">Frameworks & Tools</h3>
+        <div class="grid grid-cols-3 md:grid-cols-5 gap-6">
+          <div
+            class="skill-icon bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+            <i class="fas fa-link text-5xl text-blue-500 mb-2"></i>
+            <p class="text-gray-300">LangChain</p>
+          </div>
+
+
+          <div
+            class="skill-icon bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+            <i class="fas fa-project-diagram text-5xl text-orange-400 mb-2"></i>
+            <p class="text-gray-300">LangGraph</p>
+          </div>
+
+          <div
+            class="skill-icon bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+            <i class="devicon-fastapi-plain colored text-5xl mb-2"></i>
+            <p class="text-gray-300">FastAPI</p>
+          </div>
+
+
+          <div
+            class="skill-icon bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+            <i class="devicon-sqlite-plain colored text-5xl mb-2"></i>
+            <p class="text-gray-300">SQLite</p>
+          </div>
+
+
+          <div
+            class="skill-icon bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+            <i class="devicon-django-plain colored text-5xl mb-2"></i>
+            <p class="text-gray-300">Django</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-semibold mb-6 text-center">Development Tools</h3>
+        <div class="grid grid-cols-3 md:grid-cols-5 gap-6">
+          <div
+            class="skill-icon bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+            <i class="fas fa-code text-5xl text-blue-500 mb-2"></i>
+            <p class="text-gray-300">VS Code</p>
+          </div>
+          <div
+            class="skill-icon bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+            <i class="fab fa-github text-5xl text-gray-300 mb-2"></i>
+            <p class="text-gray-300">GitHub</p>
+          </div>
+          <!-- <div
+            class="skill-icon bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+            <i class="fab fa-android text-5xl text-green-400 mb-2"></i>
+            <p class="text-gray-300">Android Studio</p>
+          </div> -->
+          <div
+            class="skill-icon bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+            <i class="devicon-docker-plain colored text-5xl mb-2"></i>
+            <p class="text-gray-300">Docker</p>
+          </div>
+          <div
+            class="skill-icon bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 text-center card-hover">
+            <i class="fas fa-rocket text-5xl text-purple-400 mb-2"></i>
+            <p class="text-gray-300">CI/CD</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 relative z-10 bg-black bg-opacity-70">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">Featured Projects</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div
+          class="bg-gray-900 bg-opacity-70 rounded-xl overflow-hidden border border-gray-800 card-hover transform transition duration-500 hover:scale-105">
+          <div class="relative h-48 bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center">
+            <i class="fas fa-mobile-alt text-8xl text-white opacity-20"></i>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <img src="talkdoc.jpg" alt="RuralReach App" class="h-40 rounded-lg shadow-xl border-2 border-white">
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Talk-2-Doc </h3>
+            <p class="text-gray-400 mb-4">Document based-Q&A RAG Application to reduce Hallucination</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-purple-900 bg-opacity-50 rounded-full text-sm text-purple-300">Langchain</span>
+              <span class="px-3 py-1 bg-blue-900 bg-opacity-50 rounded-full text-sm text-blue-300">OpenAI</span>
+              <span class="px-3 py-1 bg-green-900 bg-opacity-50 rounded-full text-sm text-green-300">FASTAPI</span>
+            </div>
+            <a href="https://github.com/sahilpancham/rag_gemini" target="_blank"
+              class="text-purple-400 hover:text-purple-300 flex items-center">
+              View Project <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+
+        <!-- Project 2 -->
+        <div
+          class="bg-gray-900 bg-opacity-70 rounded-xl overflow-hidden border border-gray-800 card-hover transform transition duration-500 hover:scale-105">
+          <div class="relative h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+            <i class="fas fa-robot text-8xl text-white opacity-20"></i>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <img src="plag.jpg" alt="RuralReach App" class="h-40 rounded-lg shadow-xl border-2 border-white">
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Plag-Detect</h3>
+            <p class="text-gray-400 mb-4">AI-powered plagiarism detection app with NLP</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <!-- <span class="px-3 py-1 bg-orange-900 bg-opacity-50 rounded-full text-sm text-orange-300">Kotlin</span> -->
+              <span class="px-3 py-1 bg-blue-900 bg-opacity-50 rounded-full text-sm text-blue-300">Python</span>
+              <span class="px-3 py-1 bg-green-900 bg-opacity-50 rounded-full text-sm text-green-300">NLP</span>
+              <span
+                class="px-3 py-1 bg-purple-900 bg-opacity-50 rounded-full text-sm text-purple-300">Scikit-Learn</span>
+            </div>
+            <a href="https://github.com/sahilpancham/Assignment-evaluation-model" target="_blank" rel="noopener noreferrer"
+              class="text-teal-400 hover:text-teal-300 flex items-center">
+              View Project <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3
+        <div
+          class="bg-gray-900 bg-opacity-70 rounded-xl overflow-hidden border border-gray-800 card-hover transform transition duration-500 hover:scale-105">
+          <div class="relative h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+            <i class="fas fa-laptop-medical text-8xl text-white opacity-20"></i>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <img src="project_img_3.png" alt="Doctor Appointment Website"
+                class="h-40 rounded-lg shadow-xl border-2 border-white">
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Doctor Appointment System</h3>
+            <p class="text-gray-400 mb-4">Full-stack web app with appointment booking system</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-900 bg-opacity-50 rounded-full text-sm text-blue-300">HTML/CSS</span>
+              <span class="px-3 py-1 bg-yellow-900 bg-opacity-50 rounded-full text-sm text-yellow-300">JavaScript</span>
+              <span class="px-3 py-1 bg-green-900 bg-opacity-50 rounded-full text-sm text-green-300">MySQL</span>
+              <span class="px-3 py-1 bg-red-900 bg-opacity-50 rounded-full text-sm text-red-300">PHP</span>
+            </div>
+            <a href="javascript:void(0)" class="text-blue-400 hover:text-blue-300 flex items-center">
+              View Project <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div> 
+        </div> -->
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="https://github.com/sahilpancham" target="_blank" rel="noopener noreferrer"
+          class="px-6 py-3 rounded-lg font-medium text-white transition duration-300 hover:opacity-80"
+          style="background-color: #1a8402;">
+          View All Projects <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-20 relative z-10 bg-black bg-opacity-70">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">Experience</h2>
+
+      <div class="max-w-3xl mx-auto">
+        <div class="relative pl-8">
+          <div class="absolute left-0 top-0 h-full w-0.5 bg-[#1a8402]"></div>
+
+          <div class="relative mb-12">
+            <div class="absolute -left-12 top-0 w-8 h-8 rounded-full bg-[#1a8402] flex items-center justify-center">
+              <i class="fas fa-briefcase text-white"></i>
+            </div>
+            <div class="bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-xl font-semibold">Data Analyst Intern</h3>
+                  <p class="text-yellow-400">MicroWave • May 2025 – Present</p>
+                </div>
+                <div class="px-3 py-1 bg-blue-900 bg-opacity-50 rounded-full text-sm text-blue-300">Sep23 - April24
+                </div>
+              </div>
+              <ul class="mt-4 space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+                  <span>Developed a Weather Forecasting Tool for Accurate Weather Predictions</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+                  <span>Implemented various Data Preprocessing Techniques to extract the meaningful features</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+                  <span>Implemented LSTM Architechture to train the model</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+                  <span>Optimized model performance through hyperparameter tuning and cross-validation</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- <div class="relative mb-12">
+            <div class="absolute -left-12 top-0 w-8 h-8 rounded-full bg-[#1a8402] flex items-center justify-center">
+              <i class="fas fa-briefcase text-white"></i>
+            </div>
+            <div class="bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-xl font-semibold">Flutter Developer</h3>
+                  <p class="text-yellow-400">Influx Infotech • Aug-2024 - May-2025</p>
+                </div>
+                <div class="px-3 py-1 bg-blue-900 bg-opacity-50 rounded-full text-sm text-blue-300">Previous</div>
+              </div>
+              <ul class="mt-4 space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+                  <span>Integrated Google Maps SDK for location-based features</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+                  <span>Implemented push notifications using Firebase Cloud Messaging</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+                  <span>Published multiple apps on Google Play Store</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+                  <span>Improved app performance by 70% through optimization</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="relative mb-12">
+            <div class="absolute -left-12 top-0 w-8 h-8 rounded-full bg-[#1a8402] flex items-center justify-center">
+              <i class="fas fa-laptop-code text-white"></i>
+            </div>
+            <div class="bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800">
+              <h3 class="text-xl font-semibold">Mobile App Developer Intern</h3>
+              <p class="text-yellow-400">TechSolutions Inc. • Summer 2022</p>
+              <ul class="mt-4 space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-[#1a8402] mt-1 mr-2"></i>
+                  <span>Developed prototype for healthcare monitoring app</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-[#1a8402] mt-1 mr-2"></i>
+                  <span>Worked with REST APIs to fetch and display data</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-[#1a8402] mt-1 mr-2"></i>
+                  <span>Implemented user authentication flows</span>
+                </li>
+              </ul>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- <div class="mt-16">
+        <h3 class="text-2xl font-semibold mb-8 text-center">Leadership & Achievements</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 card-hover">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-[#1a8402] flex items-center justify-center mr-4">
+                <i class="fas fa-trophy text-white"></i>
+              </div>
+              <h4 class="text-xl text-yellow-400 font-semibold">President</h4>
+            </div>
+            <p class="text-gray-300">Led TECHNOVANZA Club at Galgotias University, organizing tech events, hackathons,
+              and workshops for 200+ members.</p>
+          </div>
+          <div class="bg-gray-900 bg-opacity-70 p-6 rounded-lg border border-gray-800 card-hover">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-[#1a8402] flex items-center justify-center mr-4">
+                <i class="fas fa-medal text-white"></i>
+              </div>
+              <h4 class="text-xl text-yellow-400 font-semibold">Hackathon Participant</h4>
+            </div>
+            <p class="text-gray-300">Participated in Smart India Hackathon 2023 and Inter-college Hackathon 2023,
+              developing innovative solutions to real-world problems.</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 relative z-10 bg-black bg-opacity-70">
+    <div class="container mx-auto px-6 max-w-7xl">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">Get In Touch</h2>
+
+      <div class="flex flex-col md:flex-row gap-12">
+        <!-- Form Card -->
+        <div class="md:w-1/2 bg-gray-900 bg-opacity-70 border border-gray-800 rounded-lg p-8 shadow-lg">
+          <form id="contactForm" class="space-y-6">
+            <div class="relative">
+              <input type="text" id="name" name="name" required
+                class="w-full bg-gray-900 bg-opacity-70 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-300"
+                placeholder="Your Name" />
+              <label for="name" class="absolute -top-3 left-3 bg-gray-900 px-2 text-sm text-[#1a8402]">Name</label>
+            </div>
+
+            <div class="relative">
+              <input type="email" id="email" name="email" required
+                class="w-full bg-gray-900 bg-opacity-70 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-300"
+                placeholder="Your Email" />
+              <label for="email" class="absolute -top-3 left-3 bg-gray-900 px-2 text-sm text-[#1a8402]">Email</label>
+            </div>
+
+            <div class="relative">
+              <textarea id="message" name="message" rows="5" requiree
+                class="w-full bg-gray-900 bg-opacity-70 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-300"
+                placeholder="Your Message"></textarea>
+              <label for="message"
+                class="absolute -top-3 left-3 bg-gray-900 px-2 text-sm text-[#1a8402]">Message</label>
+            </div>
+
+            <button type="submit" onclick="sendMessages()"
+              class="w-full px-6 py-3 bg-[#1a8402] rounded-lg text-white font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition duration-300">
+              Send Message <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Information Card -->
+        <div class="md:w-1/2 bg-gray-900 bg-opacity-70 border border-gray-800 rounded-lg p-8 shadow-lg h-full">
+          <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-full bg-[#1a8402] flex items-center justify-center mr-4 mt-1">
+                <i class="fas fa-envelope text-white"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-medium text-gray-300">Email</h4>
+                <a href="mailto:sahilpancham10@gmail.com"
+                  class="text-yellow-400 hover:text-purple-300">sahilpancham10@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-full bg-[#1a8402] flex items-center justify-center mr-4 mt-1">
+                <i class="fas fa-phone-alt text-white"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-medium text-gray-300">Phone</h4>
+                <a href="tel:+919518510929" class="text-yellow-400 hover:text-yellow-300">+91 9518510929</a>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-full bg-[#1a8402] flex items-center justify-center mr-4 mt-1">
+                <i class="fas fa-map-marker-alt text-white"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-medium text-gray-300">Location</h4>
+                <p class="text-yellow-400">Nagpur, Mahashtra, India</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h4 class="text-lg font-medium text-gray-300 mb-4">Connect with me</h4>
+            <div class="flex space-x-4">
+              <a href="https://www.linkedin.com/in/sahil-pancham-4603a8254/" target="_blank" rel="noopener noreferrer"
+                class="w-12 h-12 rounded-full bg-gray-800 hover:bg-purple-600 flex items-center justify-center text-white transition duration-300 glow">
+                <i class="fab fa-linkedin-in text-xl"></i>
+              </a>
+              <!-- <a href="https://x.com/PratapShwetang" target="_blank" rel="noopener noreferrer"
+                class="w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-white transition duration-300 glow">
+                <i class="fab fa-twitter text-xl"></i>
+              </a> -->
+              <a href="https://github.com/sahilpancham" target="_blank" rel="noopener noreferrer"
+                class="w-12 h-12 rounded-full bg-gray-800 hover:bg-blue-500 flex items-center justify-center text-white transition duration-300 glow">
+                <i class="fab fa-github text-xl"></i>
+              </a>
+              <!-- <a href="#"
+                class="w-12 h-12 rounded-full bg-gray-800 hover:bg-red-500 flex items-center justify-center text-white transition duration-300 glow">
+                <i class="fab fa-youtube text-xl"></i>
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="py-8 bg-black bg-opacity-90 relative z-10">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="text-xl font-bold gradient-text mb-4 md:mb-0">Sahil Pancham</div>
+        <div class="flex items-center justify-center gap-4 mt-10">
+          <span class="text-sm text-gray-300">👥 Total Visitors:</span>
+          <img
+            src="https://hitwebcounter.com/counter/counter.php?page=21065097&style=0006&nbdigits=5&type=page&initCount=0"
+            title="Counter Widget" alt="Visit counter for websites"
+            class="rounded-md border border-gray-700 shadow-md hover:scale-105 transition duration-300" />
+          </a>
+        </div>
+
+
+        <div class="text-gray-400 text-sm">
+          © 2023 All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>

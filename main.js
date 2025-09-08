@@ -164,7 +164,7 @@ async function sendMessages() {
   try {
     const response = await emailjs.send(
       "service_cmpj63m", 
-      "template_x4hf3xl", 
+      "template_68py73q", 
       params
     );
 

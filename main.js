@@ -99,7 +99,7 @@ if (typeof emailjs === 'undefined') {
 function initializeEmailJS() {
   try {
     emailjs.init({
-      publicKey: "t5TurZih_5xLhhN_i",
+      publicKey: "vAZK8LISyleuODloS",
     });
     console.log('EmailJS initialized successfully');
     setupForm();
@@ -163,7 +163,7 @@ async function sendMessages() {
 
   try {
     const response = await emailjs.send(
-      "service_cmpj63m", 
+      "service_5bcijdn", 
       "template_68py73q", 
       params
     );
